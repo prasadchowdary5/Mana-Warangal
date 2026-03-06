@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>మన వరంగల్ – తాజా వార్తలు</title>
-  <!-- Font Awesome (latest) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <!-- Google Fonts: Roboto + Lohit Telugu for better telugu support -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -21,20 +21,19 @@
       color: #1e1e1e;
     }
 
-    /* main container */
     .mw-site {
       max-width: 1300px;
       margin: 0 auto;
       background: white;
       box-shadow: 0 0 25px rgba(0,0,0,0.05);
+      min-height: 100vh;
     }
 
-    /* header with telugu brand + quotation */
+    /* Header */
     .mw-header {
       background: linear-gradient(145deg, #8b1e1e 0%, #b1452b 100%);
       padding: 1.8rem 1.5rem 1rem 1.5rem;
       color: white;
-      position: relative;
       border-bottom: 5px solid #fbc02d;
     }
 
@@ -49,7 +48,6 @@
       font-size: 3.2rem;
       font-weight: 700;
       line-height: 1.1;
-      letter-spacing: -0.5px;
       text-shadow: 4px 4px 0 #572222;
     }
 
@@ -57,7 +55,6 @@
       font-size: 1.2rem;
       margin-left: 8px;
       font-style: italic;
-      opacity: 0.9;
     }
 
     .mw-quote {
@@ -66,21 +63,10 @@
       padding: 0.7rem 1.8rem;
       border-radius: 60px;
       font-size: 1.4rem;
-      font-weight: 500;
       border: 1px solid #fbc02d;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .mw-quote i {
-      margin-right: 10px;
-      color: #ffd966;
-    }
-
-    .mw-quote span {
-      font-family: 'Lohit Telugu', 'Noto Sans Telugu', serif;
-    }
-
-    /* navigation — simple & clean */
+    /* Navigation */
     .mw-nav {
       background: #2c130b;
       padding: 0.7rem 1.5rem;
@@ -96,7 +82,6 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 1.15rem;
-      transition: 0.2s;
       padding: 0.2rem 0;
       border-bottom: 2px solid transparent;
     }
@@ -106,12 +91,7 @@
       border-bottom-color: #fbc02d;
     }
 
-    .mw-nav .home-icon {
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-
-    /* social media mini strip */
+    /* Social Strip */
     .mw-social-strip {
       background: #faead3;
       padding: 0.5rem 1.5rem;
@@ -124,22 +104,15 @@
 
     .mw-social-strip span {
       color: #5f3e2c;
-      font-weight: 500;
     }
 
     .mw-social-strip a {
       color: #5f3e2c;
       font-size: 1.5rem;
       margin-right: 1.2rem;
-      transition: 0.2s;
     }
 
-    .mw-social-strip a:hover {
-      color: #b1452b;
-      transform: scale(1.1);
-    }
-
-    /* main content */
+    /* Main Content */
     .mw-main {
       padding: 2rem 1.5rem;
       background: #fefcf7;
@@ -155,33 +128,26 @@
 
     .section-head h2 {
       font-size: 2rem;
-      font-weight: 600;
       color: #2a1b13;
-      letter-spacing: -0.3px;
     }
 
-    .section-head i {
-      font-size: 2rem;
-      margin-right: 0.8rem;
-      color: #b96b46;
-    }
-
-    /* thumbnail grid – exactly like social media news cards */
+    /* News Grid */
     .mw-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem 1.5rem;
-      margin-top: 1rem;
     }
 
     .news-card {
       background: white;
-      border-radius: 24px 24px 20px 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 4px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
+      border-radius: 24px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
       border: 1px solid #f0e0d0;
       overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
 
     .news-card:hover {
@@ -198,11 +164,8 @@
       display: flex;
       align-items: flex-end;
       padding: 10px;
-      background-color: #d9c4b0;
-      background-blend-mode: overlay;
     }
 
-    /* overlay quotation on thumbnail (subtle) */
     .card-quote-overlay {
       background: rgba(0,0,0,0.55);
       backdrop-filter: blur(3px);
@@ -210,16 +173,7 @@
       padding: 0.6rem 1rem;
       border-radius: 40px;
       font-size: 0.9rem;
-      font-weight: 500;
-      width: fit-content;
-      margin-bottom: 6px;
       border: 1px solid #f5b87e;
-    }
-
-    .card-quote-overlay i {
-      margin-right: 6px;
-      color: #fbc02d;
-      font-size: 0.8rem;
     }
 
     .card-content {
@@ -229,7 +183,6 @@
     .card-title {
       font-size: 1.35rem;
       font-weight: 700;
-      line-height: 1.4;
       margin-bottom: 0.5rem;
       color: #2c1b10;
     }
@@ -240,32 +193,22 @@
       font-size: 0.85rem;
       color: #9e7b62;
       margin-bottom: 1rem;
-      align-items: center;
-    }
-
-    .card-meta i {
-      margin-right: 4px;
-      color: #c27e55;
     }
 
     .card-excerpt {
       color: #4f3e32;
       line-height: 1.6;
       margin-bottom: 1.2rem;
-      font-size: 0.98rem;
       border-left: 2px solid #fac364;
       padding-left: 0.9rem;
     }
 
     .read-more {
       display: inline-block;
-      background: none;
-      border: none;
       color: #b1452b;
       font-weight: 600;
-      padding: 0.3rem 0;
       border-bottom: 2px dotted #d6936b;
-      cursor: pointer;
+      text-decoration: none;
     }
 
     .read-more i {
@@ -277,7 +220,72 @@
       transform: translateX(5px);
     }
 
-    /* footer */
+    /* Article Page Styles */
+    .article-page {
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #b1452b;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .back-button i {
+      margin-right: 8px;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      color: #2c1b10;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 2rem;
+      color: #9e7b62;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid #faead3;
+    }
+
+    .article-image {
+      width: 100%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .article-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #2c1b10;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+    }
+
+    .article-quote {
+      background: #faead3;
+      padding: 2rem;
+      border-radius: 20px;
+      margin: 2rem 0;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: #8b1e1e;
+      text-align: center;
+    }
+
+    /* Footer */
     .mw-footer {
       background: #25170f;
       color: #dac2ad;
@@ -298,22 +306,13 @@
       color: #f5cba1;
     }
 
-    .footer-copy {
-      font-size: 1rem;
-      opacity: 0.9;
-    }
-
     .footer-social a {
       color: #f5cba1;
       font-size: 1.7rem;
       margin-left: 15px;
     }
 
-    .footer-social a:hover {
-      color: #fbc02d;
-    }
-
-    /* pagination (like social media load more) */
+    /* Pagination */
     .mw-pagination {
       display: flex;
       justify-content: center;
@@ -327,7 +326,6 @@
       border-radius: 50px;
       font-weight: 600;
       color: #732f15;
-      transition: 0.2s;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -337,26 +335,18 @@
     .pagination-btn:hover {
       background: #b96b46;
       color: white;
-      border-color: #b1452b;
     }
 
-    /* responsiveness */
     @media (max-width: 700px) {
       .mw-logo h1 { font-size: 2.4rem; }
-      .mw-quote { font-size: 1.1rem; padding: 0.4rem 1rem; }
-      .mw-header-top { flex-direction: column; gap: 1rem; }
+      .article-title { font-size: 1.8rem; }
+      .article-image { height: 250px; }
     }
-    @media (max-width: 480px) {
-      .mw-grid { grid-template-columns: 1fr; }
-    }
-
-    /* dummy "inside the card" story preview (modal-like not needed, just click simulation) */
-    /* we keep it simple – click card shows an alert with "news content" (demo) */
   </style>
 </head>
 <body>
-<div class="mw-site">
-  <!-- header with TELUGU logo and quotation -->
+<div class="mw-site" id="app">
+  <!-- Header (always visible) -->
   <div class="mw-header">
     <div class="mw-header-top">
       <div class="mw-logo">
@@ -365,133 +355,40 @@
       </div>
       <div class="mw-quote">
         <i class="fas fa-quote-right"></i>
-        <span>ఓటమి అనేది సోమరుల సొత్తు – వరంగల్ వీరులు ఎప్పటికీ లక్ష్యసాధనలోనే</span>
-        <i class="fas fa-quote-left" style="margin-left:8px;"></i>
+        <span>ఓటమి అనేది సోమరుల సొత్తు</span>
       </div>
     </div>
   </div>
 
-  <!-- navigation -->
+  <!-- Navigation -->
   <div class="mw-nav">
-    <a href="/" class="home-icon"><i class="fas fa-home"></i></a>
-    <a href="#">తాజా వార్తలు</a>
-    <a href="#">రాజకీయం</a>
-    <a href="#">క్రీడలు</a>
-    <a href="#">సినిమా</a>
-    <a href="#">జిల్లా</a>
-    <a href="#">బ్లాగులు</a>
+    <a href="?page=home" class="home-link"><i class="fas fa-home"></i></a>
+    <a href="?page=home">తాజా వార్తలు</a>
+    <a href="?page=category&cat=politics">రాజకీయం</a>
+    <a href="?page=category&cat=sports">క్రీడలు</a>
+    <a href="?page=category&cat=cinema">సినిమా</a>
   </div>
 
-  <!-- social strip (mini) -->
+  <!-- Social Strip -->
   <div class="mw-social-strip">
-    <span><i class="fab fa-facebook-f"></i> ‌‌@ManaWarangal </span>
+    <span><i class="fab fa-facebook-f"></i> @ManaWarangal</span>
     <span><i class="fab fa-x-twitter"></i> @WarangalVoice</span>
     <span><i class="fab fa-instagram"></i> warangal_today</span>
-    <span><i class="fab fa-youtube"></i> Warangal TV</span>
     <span class="ml-auto"><i class="fas fa-calendar-alt"></i> 6 మార్చి 2026</span>
   </div>
 
-  <!-- main area: thumbnail news grid -->
-  <div class="mw-main">
-    <div class="section-head">
-      <i class="fas fa-newspaper"></i>
-      <h2>ఈరోజు హైలైట్స్</h2>
-    </div>
-
-    <!-- news grid (each card = thumbnail + inside story) -->
-    <div class="mw-grid" id="newsGrid">
-      <!-- card 1 -->
-      <div class="news-card" onclick="openStory(1)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://placecats.com/400/200'); background-size: cover;">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> చరిత్ర సృష్టించే వరంగల్ యువత</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 2 గంటల క్రితం · <i class="fas fa-user"></i> శ్రీను</div>
-          <div class="card-excerpt">కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం..</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(1)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <!-- card 2 -->
-      <div class="news-card" onclick="openStory(2)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('https://placecats.com/400/201');">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> ప్రతి ఒక్కరూ ఓటు వేయాల్సిందే</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 5 గంటల క్రితం · <i class="fas fa-user"></i> అజయ్</div>
-          <div class="card-excerpt">మాజీ మంత్రి, యువ నేత మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్..</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(2)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <!-- card 3 -->
-      <div class="news-card" onclick="openStory(3)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://placecats.com/400/202');">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> చెరువులు పూడ్చి కట్టడాలు వద్దు</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 1 రోజు క్రితం · <i class="fas fa-user"></i> కవిత</div>
-          <div class="card-excerpt">చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం..</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(3)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <!-- card 4 -->
-      <div class="news-card" onclick="openStory(4)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.1)), url('https://placecats.com/401/200');">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> యువతీ యువకులకు సూపర్ అవకాశం</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 1 రోజు క్రితం · <i class="fas fa-user"></i> డా. సాయి</div>
-          <div class="card-excerpt">రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(4)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <!-- card 5 -->
-      <div class="news-card" onclick="openStory(5)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1)), url('https://placecats.com/401/201');">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> క్రీడల్లో మన వాళ్లు అదుర్స్</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 8 గంటల క్రితం · <i class="fas fa-user"></i> రాజేష్</div>
-          <div class="card-excerpt">రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(5)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-
-      <!-- card 6 -->
-      <div class="news-card" onclick="openStory(6)">
-        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('https://placecats.com/402/200');">
-          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> ఇది అందరి పోరాటం</div>
-        </div>
-        <div class="card-content">
-          <div class="card-title">కుల గణనపై వరంగల్లో ఘన ర్యాలీ</div>
-          <div class="card-meta"><i class="far fa-clock"></i> 2 రోజుల క్రితం · <i class="fas fa-user"></i> స్వాతి</div>
-          <div class="card-excerpt">వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్న కార్యక్రమం..</div>
-          <span class="read-more" onclick="event.stopPropagation();openStory(6)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </div>
-    </div>
-
-    <!-- pagination (mock) -->
-    <div class="mw-pagination">
-      <div class="pagination-btn" onclick="loadMore()"><i class="fas fa-sync-alt"></i> మరిన్ని కథనాలు</div>
-    </div>
+  <!-- Dynamic Content Area -->
+  <div id="content-area">
+    <!-- Content will be loaded here based on URL -->
   </div>
 
-  <!-- footer with same telugu style -->
+  <!-- Footer -->
   <div class="mw-footer">
     <div class="footer-content">
       <div class="footer-logo"><span>మన వరంగల్</span></div>
       <div class="footer-copy">
-        <i class="far fa-copyright"></i> 2026 మన వరంగల్ న్యూస్. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.<br>
-        <span style="font-size:0.9rem;">గాంధీ రోడ్డు, వరంగల్ - 506002</span>
+        <i class="far fa-copyright"></i> 2026 మన వరంగల్ న్యూస్.<br>
+        గాంధీ రోడ్డు, వరంగల్ - 506002
       </div>
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -500,40 +397,202 @@
         <a href="#"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
-    <div style="text-align:center; margin-top:2rem; font-size:1rem; border-top: 1px solid #664a39; padding-top:1.5rem;">
-      <i class="fas fa-quote-left" style="color:#d18e5c;"></i> సమాజం గెలవాలి, మన వరంగల్ నిలవాలి <i class="fas fa-quote-right" style="color:#d18e5c;"></i>
-    </div>
   </div>
 </div>
 
-<!-- dummy javascript for "inside news" modal simulation (alerts) & load more -->
 <script>
-  // open story function (simulate reading full article)
-  function openStory(newsId) {
-    const stories = [
-      { title: "హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు", content: "కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం. పోలీసులు కేసు నమోదు చేసి విచారణ జరుపుతున్నారు. విద్యార్థులు అధికారులతో చర్చలకు సిద్ధమని తెలిపారు." },
-      { title: "వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ", content: "మాజీ మంత్రి శ్రీనివాస్ రెడ్డి, యువ నేత అంజయ్య యాదవ్ మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్ నమోదైంది. ప్రశాంతంగా ఓటింగ్ జరుగుతోంది." },
-      { title: "ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం", content: "చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం. రైతు సంఘాలు పెద్ద ఎత్తున మద్దతు ప్రకటించాయి." },
-      { title: "కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు", content: "రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ. EAMCET ర్యాంకుల ఆధారంగా ప్రవేశాలు." },
-      { title: "వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో", content: "రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో జరుగనుంది. ప్రభుత్వం జట్టును ప్రోత్సహించింది." },
-      { title: "కుల గణనపై వరంగల్లో ఘన ర్యాలీ", content: "వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్నారు. కుల గణన వల్ల ప్రజలకు న్యాయం జరుగుతుందని నినాదాలు చేశారు." }
-    ];
-    const selected = stories[newsId-1] || stories[0];
-    alert("📰 " + selected.title + "\n\n" + selected.content + "\n\n( ఇది లోపలి వార్త కంటెంట్ - మన వరంగల్ )");
-  }
-
-  function loadMore() {
-    alert("మరిన్ని కథనాలు లోడ్ అవుతున్నాయి... (demo)");
-    // you could append more cards dynamically, but for demo just message.
-    // optional: add one more card
-    const grid = document.getElementById('newsGrid');
-    if(grid.children.length < 12) {
-      const demoHtml = ` <div class="news-card" onclick="openStory(1)"> ... </div>`; // skip for brevity
-      // just show toast, do nothing else
+  // News database
+  const newsData = {
+    1: {
+      id: 1,
+      title: "హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు",
+      excerpt: "కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం..",
+      content: `<p>కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం. పోలీసులు కేసు నమోదు చేసి విచారణ జరుపుతున్నారు.</p>
+                <p>విద్యార్థులు అధికారులతో చర్చలకు సిద్ధమని తెలిపారు. ఈ ర్యాలీలో 10,000 మందికి పైగా విద్యార్థులు పాల్గొన్నారు.</p>
+                <div class="article-quote">
+                  <i class="fas fa-quote-left"></i> మా గొంతు వినిపించాలి, న్యాయం జరగాలి <i class="fas fa-quote-right"></i>
+                </div>
+                <p>ఉన్నత విద్య కోసం ఈ పోరాటం కొనసాగుతుందని విద్యార్థి నాయకులు తెలిపారు.</p>`,
+      image: "https://placecats.com/800/400",
+      date: "2 గంటల క్రితం",
+      author: "శ్రీను",
+      category: "politics"
+    },
+    2: {
+      id: 2,
+      title: "వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ",
+      excerpt: "మాజీ మంత్రి, యువ నేత మధ్య ఆసక్తికర పోరు..",
+      content: `<p>మాజీ మంత్రి శ్రీనివాస్ రెడ్డి, యువ నేత అంజయ్య యాదవ్ మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్ నమోదైంది.</p>
+                <p>ప్రశాంతంగా ఓటింగ్ జరుగుతోంది. ఇరువురు అభ్యర్థులు తమ విజయం ఖాయమని చెబుతున్నారు.</p>
+                <div class="article-quote">
+                  <i class="fas fa-quote-left"></i> ప్రజలే నిర్ణయిస్తారు <i class="fas fa-quote-right"></i>
+                </div>`,
+      image: "https://placecats.com/801/400",
+      date: "5 గంటల క్రితం",
+      author: "అజయ్",
+      category: "politics"
+    },
+    3: {
+      id: 3,
+      title: "ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం",
+      excerpt: "చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని..",
+      content: `<p>చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం. రైతు సంఘాలు పెద్ద ఎత్తున మద్దతు ప్రకటించాయి.</p>
+                <p>బడేరావు చెరువు వేల ఎకరాలకు సాగునీరు అందిస్తుంది. దీని పరిరక్షణ అత్యవసరమని రైతులు చెబుతున్నారు.</p>`,
+      image: "https://placecats.com/802/400",
+      date: "1 రోజు క్రితం",
+      author: "కవిత",
+      category: "district"
+    },
+    4: {
+      id: 4,
+      title: "కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు",
+      excerpt: "రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల..",
+      content: `<p>రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ. EAMCET ర్యాంకుల ఆధారంగా ప్రవేశాలు.</p>
+                <p>వైద్య విద్య కోరుకునే విద్యార్థులకు ఇది సువర్ణావకాశం. దరఖాస్తు ప్రక్రియ ఆన్లైన్లో అందుబాటులో ఉంది.</p>`,
+      image: "https://placecats.com/803/400",
+      date: "1 రోజు క్రితం",
+      author: "డా. సాయి",
+      category: "education"
+    },
+    5: {
+      id: 5,
+      title: "వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో",
+      excerpt: "రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన..",
+      content: `<p>రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో జరుగనుంది.</p>
+                <p>ప్రభుత్వం జట్టును ప్రోత్సహించింది. బాలికలకు అండగా నిలవాలని క్రీడాభిమానులు పిలుపునిచ్చారు.</p>`,
+      image: "https://placecats.com/804/400",
+      date: "8 గంటల క్రితం",
+      author: "రాజేష్",
+      category: "sports"
+    },
+    6: {
+      id: 6,
+      title: "కుల గణనపై వరంగల్లో ఘన ర్యాలీ",
+      excerpt: "వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా..",
+      content: `<p>వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్న కార్యక్రమం. కుల గణన వల్ల ప్రజలకు న్యాయం జరుగుతుందని నినాదాలు చేశారు.</p>
+                <p>ఈ ర్యాలీలో వేల మంది పాల్గొని తమ మద్దతు ప్రకటించారు. ప్రభుత్వం త్వరగా నిర్ణయం తీసుకోవాలని డిమాండ్ చేశారు.</p>`,
+      image: "https://placecats.com/805/400",
+      date: "2 రోజుల క్రితం",
+      author: "స్వాతి",
+      category: "politics"
     }
-  }
-</script>
+  };
 
-<!-- optional: notice that we're not loading heavy jquery, pure html/js -->
+  // Router function
+  function handleNavigation() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page') || 'home';
+    const newsId = urlParams.get('id');
+    const category = urlParams.get('cat');
+    
+    let html = '';
+    
+    if (page === 'article' && newsId && newsData[newsId]) {
+      // Show article page
+      const article = newsData[newsId];
+      html = `
+        <div class="article-page">
+          <a href="?page=home" class="back-button">
+            <i class="fas fa-arrow-left"></i> తిరిగి వార్తలకు
+          </a>
+          <h1 class="article-title">${article.title}</h1>
+          <div class="article-meta">
+            <span><i class="far fa-clock"></i> ${article.date}</span>
+            <span><i class="fas fa-user"></i> ${article.author}</span>
+            <span><i class="fas fa-folder"></i> ${article.category}</span>
+          </div>
+          <div class="article-image" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('${article.image}');"></div>
+          <div class="article-content">
+            ${article.content}
+          </div>
+        </div>
+      `;
+    } else if (page === 'category' && category) {
+      // Show category page
+      const filteredNews = Object.values(newsData).filter(n => n.category === category);
+      html = `
+        <div class="mw-main">
+          <div class="section-head">
+            <i class="fas fa-filter"></i>
+            <h2>${category} వార్తలు</h2>
+          </div>
+          <div class="mw-grid">
+            ${filteredNews.map(news => `
+              <a href="?page=article&id=${news.id}" class="news-card">
+                <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400').replace('400', '200')}');">
+                  <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> తాజా వార్త</div>
+                </div>
+                <div class="card-content">
+                  <div class="card-title">${news.title}</div>
+                  <div class="card-meta"><i class="far fa-clock"></i> ${news.date} · <i class="fas fa-user"></i> ${news.author}</div>
+                  <div class="card-excerpt">${news.excerpt}</div>
+                  <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else {
+      // Show home page with all news
+      html = `
+        <div class="mw-main">
+          <div class="section-head">
+            <i class="fas fa-newspaper"></i>
+            <h2>ఈరోజు హైలైట్స్</h2>
+          </div>
+          <div class="mw-grid">
+            ${Object.values(newsData).map(news => `
+              <a href="?page=article&id=${news.id}" class="news-card">
+                <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400').replace('400', '200')}');">
+                  <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> తాజా వార్త</div>
+                </div>
+                <div class="card-content">
+                  <div class="card-title">${news.title}</div>
+                  <div class="card-meta"><i class="far fa-clock"></i> ${news.date} · <i class="fas fa-user"></i> ${news.author}</div>
+                  <div class="card-excerpt">${news.excerpt}</div>
+                  <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+          <div class="mw-pagination">
+            <div class="pagination-btn" onclick="loadMoreNews()">
+              <i class="fas fa-sync-alt"></i> మరిన్ని కథనాలు
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    document.getElementById('content-area').innerHTML = html;
+  }
+
+  // Load more function
+  function loadMoreNews() {
+    alert("మరిన్ని కథనాలు లోడ్ అవుతున్నాయి... (డెమో కోసం ఇది డమ్మీ ఫంక్షన్)");
+  }
+
+  // Handle back/forward buttons
+  window.addEventListener('popstate', handleNavigation);
+
+  // Handle all navigation links
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('a')) {
+      const link = e.target.closest('a');
+      const href = link.getAttribute('href');
+      
+      // Only handle internal links that start with ?page=
+      if (href && href.startsWith('?page=')) {
+        e.preventDefault();
+        history.pushState({}, '', href);
+        handleNavigation();
+      }
+    }
+  });
+
+  // Initial load
+  handleNavigation();
+</script>
 </body>
 </html>
