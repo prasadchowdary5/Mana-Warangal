@@ -2,7 +2,7 @@
 <html lang="te">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
   <title>మన వరంగల్ – తాజా వార్తలు</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -32,7 +32,7 @@
     /* Header */
     .mw-header {
       background: linear-gradient(145deg, #8b1e1e 0%, #b1452b 100%);
-      padding: 1.8rem 1.5rem 1rem 1.5rem;
+      padding: 1.5rem 1rem;
       color: white;
       border-bottom: 5px solid #fbc02d;
     }
@@ -40,109 +40,146 @@
     .mw-header-top {
       display: flex;
       flex-wrap: wrap;
-      align-items: baseline;
+      align-items: center;
       justify-content: space-between;
+      gap: 1rem;
     }
 
     .mw-logo h1 {
-      font-size: 3.2rem;
+      font-size: clamp(2rem, 6vw, 3.2rem);
       font-weight: 700;
       line-height: 1.1;
       text-shadow: 4px 4px 0 #572222;
     }
 
     .mw-logo p {
-      font-size: 1.2rem;
-      margin-left: 8px;
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
       font-style: italic;
     }
 
     .mw-quote {
       background: rgba(255,255,240,0.18);
       backdrop-filter: blur(2px);
-      padding: 0.7rem 1.8rem;
+      padding: 0.5rem 1.2rem;
       border-radius: 60px;
-      font-size: 1.4rem;
+      font-size: clamp(0.9rem, 3vw, 1.4rem);
       border: 1px solid #fbc02d;
     }
 
     /* Navigation */
     .mw-nav {
       background: #2c130b;
-      padding: 0.7rem 1.5rem;
+      padding: 0.7rem 1rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1rem;
       align-items: center;
       border-bottom: 2px solid #f3b33d;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .mw-nav::-webkit-scrollbar {
+      display: none;
     }
 
     .mw-nav a {
       color: #f5e2c1;
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.15rem;
-      padding: 0.2rem 0;
-      border-bottom: 2px solid transparent;
+      font-size: 1rem;
+      white-space: nowrap;
+      padding: 0.2rem 0.5rem;
     }
 
-    .mw-nav a:hover {
-      color: #fbc02d;
-      border-bottom-color: #fbc02d;
-    }
-
-    /* Social Strip */
-    .mw-social-strip {
+    /* Calendar Strip */
+    .calendar-strip {
       background: #faead3;
-      padding: 0.5rem 1.5rem;
+      padding: 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-bottom: 2px solid #dbb68c;
+    }
+
+    .calendar-dates {
       display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      align-items: center;
-      border-bottom: 1px solid #dbb68c;
+      gap: 1rem;
+      min-width: max-content;
     }
 
-    .mw-social-strip span {
-      color: #5f3e2c;
+    .date-item {
+      text-align: center;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.2s;
+      border: 1px solid transparent;
     }
 
-    .mw-social-strip a {
-      color: #5f3e2c;
-      font-size: 1.5rem;
-      margin-right: 1.2rem;
+    .date-item.active {
+      background: #b1452b;
+      color: white;
+      border-color: #fbc02d;
+    }
+
+    .date-item .day {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .date-item .month {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    .date-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(181, 76, 36, 0.3);
     }
 
     /* Main Content */
     .mw-main {
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1rem;
       background: #fefcf7;
     }
 
     .section-head {
       display: flex;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       border-left: 8px solid #b1452b;
-      padding-left: 1.2rem;
+      padding-left: 1rem;
     }
 
     .section-head h2 {
-      font-size: 2rem;
+      font-size: clamp(1.3rem, 4vw, 2rem);
       color: #2a1b13;
+    }
+
+    .selected-date-badge {
+      background: #faead3;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      font-weight: 500;
     }
 
     /* News Grid */
     .mw-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
 
     .news-card {
       background: white;
-      border-radius: 24px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.2s;
       border: 1px solid #f0e0d0;
       overflow: hidden;
       text-decoration: none;
@@ -151,13 +188,12 @@
     }
 
     .news-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 24px 30px rgba(181, 76, 36, 0.15);
-      border-color: #c1663b;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 25px rgba(181, 76, 36, 0.15);
     }
 
     .card-thumb {
-      height: 200px;
+      height: 180px;
       background-size: cover;
       background-position: center;
       position: relative;
@@ -170,77 +206,67 @@
       background: rgba(0,0,0,0.55);
       backdrop-filter: blur(3px);
       color: #ffefd5;
-      padding: 0.6rem 1rem;
-      border-radius: 40px;
-      font-size: 0.9rem;
-      border: 1px solid #f5b87e;
+      padding: 0.4rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
     }
 
     .card-content {
-      padding: 1.3rem 1.2rem 1.5rem 1.2rem;
+      padding: 1.2rem;
     }
 
     .card-title {
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: #2c1b10;
+      line-height: 1.4;
     }
 
     .card-meta {
       display: flex;
-      gap: 1rem;
-      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      font-size: 0.8rem;
       color: #9e7b62;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .card-excerpt {
       color: #4f3e32;
-      line-height: 1.6;
-      margin-bottom: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
       border-left: 2px solid #fac364;
-      padding-left: 0.9rem;
+      padding-left: 0.8rem;
+      font-size: 0.9rem;
     }
 
     .read-more {
       display: inline-block;
       color: #b1452b;
       font-weight: 600;
+      font-size: 0.9rem;
       border-bottom: 2px dotted #d6936b;
       text-decoration: none;
     }
 
-    .read-more i {
-      transition: 0.2s;
-      margin-left: 5px;
-    }
-
-    .read-more:hover i {
-      transform: translateX(5px);
-    }
-
-    /* Article Page Styles */
+    /* Article Page */
     .article-page {
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1rem;
       max-width: 800px;
       margin: 0 auto;
     }
 
     .back-button {
       display: inline-block;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       color: #b1452b;
       text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .back-button i {
-      margin-right: 8px;
+      font-size: 1rem;
     }
 
     .article-title {
-      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
       color: #2c1b10;
       margin-bottom: 1rem;
       line-height: 1.3;
@@ -248,39 +274,40 @@
 
     .article-meta {
       display: flex;
-      gap: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
       color: #9e7b62;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       padding-bottom: 1rem;
       border-bottom: 2px solid #faead3;
+      font-size: 0.9rem;
     }
 
     .article-image {
       width: 100%;
-      height: 400px;
+      height: 250px;
       background-size: cover;
       background-position: center;
-      border-radius: 20px;
-      margin-bottom: 2rem;
+      border-radius: 15px;
+      margin-bottom: 1.5rem;
     }
 
     .article-content {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #2c1b10;
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     .article-content p {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
     }
 
     .article-quote {
       background: #faead3;
-      padding: 2rem;
-      border-radius: 20px;
-      margin: 2rem 0;
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin: 1.5rem 0;
       font-style: italic;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #8b1e1e;
       text-align: center;
     }
@@ -289,64 +316,80 @@
     .mw-footer {
       background: #25170f;
       color: #dac2ad;
-      padding: 2rem 1.5rem 1.5rem;
+      padding: 1.5rem 1rem;
       border-top: 6px solid #b96b46;
     }
 
     .footer-content {
       display: flex;
       flex-wrap: wrap;
+      gap: 1.5rem;
       justify-content: space-between;
       align-items: center;
     }
 
     .footer-logo span {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: #f5cba1;
     }
 
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
     .footer-social a {
       color: #f5cba1;
-      font-size: 1.7rem;
-      margin-left: 15px;
+      font-size: 1.5rem;
     }
 
     /* Pagination */
     .mw-pagination {
       display: flex;
       justify-content: center;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .pagination-btn {
       background: #fae6d8;
       border: 1px solid #cb8e69;
-      padding: 0.8rem 2rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 50px;
       font-weight: 600;
       color: #732f15;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.5rem;
+      font-size: 0.9rem;
     }
 
-    .pagination-btn:hover {
-      background: #b96b46;
-      color: white;
+    /* No News Message */
+    .no-news {
+      text-align: center;
+      padding: 3rem;
+      color: #9e7b62;
+      background: #faead3;
+      border-radius: 20px;
+      margin: 2rem 0;
     }
 
-    @media (max-width: 700px) {
-      .mw-logo h1 { font-size: 2.4rem; }
-      .article-title { font-size: 1.8rem; }
-      .article-image { height: 250px; }
+    @media (max-width: 480px) {
+      .mw-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 <div class="mw-site" id="app">
-  <!-- Header (always visible) -->
+  <!-- Header -->
   <div class="mw-header">
     <div class="mw-header-top">
       <div class="mw-logo">
@@ -355,39 +398,37 @@
       </div>
       <div class="mw-quote">
         <i class="fas fa-quote-right"></i>
-        <span>ఓటమి అనేది సోమరుల సొత్తు</span>
+        <span>చరిత్ర సృష్టించే వరంగల్</span>
       </div>
     </div>
   </div>
 
   <!-- Navigation -->
   <div class="mw-nav">
-    <a href="?page=home" class="home-link"><i class="fas fa-home"></i></a>
-    <a href="?page=home">తాజా వార్తలు</a>
-    <a href="?page=category&cat=politics">రాజకీయం</a>
-    <a href="?page=category&cat=sports">క్రీడలు</a>
-    <a href="?page=category&cat=cinema">సినిమా</a>
+    <a href="?page=home" class="home-link"><i class="fas fa-home"></i> హోమ్</a>
+    <a href="?page=category&cat=పొలిటిక్స్">రాజకీయం</a>
+    <a href="?page=category&cat=క్రీడలు">క్రీడలు</a>
+    <a href="?page=category&cat=సినిమా">సినిమా</a>
+    <a href="?page=category&cat=జిల్లా">జిల్లా</a>
+    <a href="?page=category&cat=విద్య">విద్య</a>
   </div>
 
-  <!-- Social Strip -->
-  <div class="mw-social-strip">
-    <span><i class="fab fa-facebook-f"></i> @ManaWarangal</span>
-    <span><i class="fab fa-x-twitter"></i> @WarangalVoice</span>
-    <span><i class="fab fa-instagram"></i> warangal_today</span>
-    <span class="ml-auto"><i class="fas fa-calendar-alt"></i> 6 మార్చి 2026</span>
+  <!-- Calendar Strip (Mobile Friendly) -->
+  <div class="calendar-strip" id="calendarStrip">
+    <div class="calendar-dates" id="calendarDates">
+      <!-- Dates will be dynamically loaded -->
+    </div>
   </div>
 
   <!-- Dynamic Content Area -->
-  <div id="content-area">
-    <!-- Content will be loaded here based on URL -->
-  </div>
+  <div id="content-area"></div>
 
   <!-- Footer -->
   <div class="mw-footer">
     <div class="footer-content">
       <div class="footer-logo"><span>మన వరంగల్</span></div>
       <div class="footer-copy">
-        <i class="far fa-copyright"></i> 2026 మన వరంగల్ న్యూస్.<br>
+        <i class="far fa-copyright"></i> 2026 మన వరంగల్ న్యూస్<br>
         గాంధీ రోడ్డు, వరంగల్ - 506002
       </div>
       <div class="footer-social">
@@ -401,82 +442,160 @@
 </div>
 
 <script>
-  // News database
-  const newsData = {
-    1: {
-      id: 1,
-      title: "హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు",
-      excerpt: "కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం..",
-      content: `<p>కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం. పోలీసులు కేసు నమోదు చేసి విచారణ జరుపుతున్నారు.</p>
-                <p>విద్యార్థులు అధికారులతో చర్చలకు సిద్ధమని తెలిపారు. ఈ ర్యాలీలో 10,000 మందికి పైగా విద్యార్థులు పాల్గొన్నారు.</p>
-                <div class="article-quote">
-                  <i class="fas fa-quote-left"></i> మా గొంతు వినిపించాలి, న్యాయం జరగాలి <i class="fas fa-quote-right"></i>
-                </div>
-                <p>ఉన్నత విద్య కోసం ఈ పోరాటం కొనసాగుతుందని విద్యార్థి నాయకులు తెలిపారు.</p>`,
-      image: "https://placecats.com/800/400",
-      date: "2 గంటల క్రితం",
-      author: "శ్రీను",
-      category: "politics"
-    },
-    2: {
-      id: 2,
-      title: "వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ",
-      excerpt: "మాజీ మంత్రి, యువ నేత మధ్య ఆసక్తికర పోరు..",
-      content: `<p>మాజీ మంత్రి శ్రీనివాస్ రెడ్డి, యువ నేత అంజయ్య యాదవ్ మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్ నమోదైంది.</p>
-                <p>ప్రశాంతంగా ఓటింగ్ జరుగుతోంది. ఇరువురు అభ్యర్థులు తమ విజయం ఖాయమని చెబుతున్నారు.</p>
-                <div class="article-quote">
-                  <i class="fas fa-quote-left"></i> ప్రజలే నిర్ణయిస్తారు <i class="fas fa-quote-right"></i>
-                </div>`,
-      image: "https://placecats.com/801/400",
-      date: "5 గంటల క్రితం",
-      author: "అజయ్",
-      category: "politics"
-    },
-    3: {
-      id: 3,
-      title: "ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం",
-      excerpt: "చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని..",
-      content: `<p>చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం. రైతు సంఘాలు పెద్ద ఎత్తున మద్దతు ప్రకటించాయి.</p>
-                <p>బడేరావు చెరువు వేల ఎకరాలకు సాగునీరు అందిస్తుంది. దీని పరిరక్షణ అత్యవసరమని రైతులు చెబుతున్నారు.</p>`,
-      image: "https://placecats.com/802/400",
-      date: "1 రోజు క్రితం",
-      author: "కవిత",
-      category: "district"
-    },
-    4: {
-      id: 4,
-      title: "కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు",
-      excerpt: "రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల..",
-      content: `<p>రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ. EAMCET ర్యాంకుల ఆధారంగా ప్రవేశాలు.</p>
-                <p>వైద్య విద్య కోరుకునే విద్యార్థులకు ఇది సువర్ణావకాశం. దరఖాస్తు ప్రక్రియ ఆన్లైన్లో అందుబాటులో ఉంది.</p>`,
-      image: "https://placecats.com/803/400",
-      date: "1 రోజు క్రితం",
-      author: "డా. సాయి",
-      category: "education"
-    },
-    5: {
-      id: 5,
-      title: "వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో",
-      excerpt: "రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన..",
-      content: `<p>రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో జరుగనుంది.</p>
-                <p>ప్రభుత్వం జట్టును ప్రోత్సహించింది. బాలికలకు అండగా నిలవాలని క్రీడాభిమానులు పిలుపునిచ్చారు.</p>`,
-      image: "https://placecats.com/804/400",
-      date: "8 గంటల క్రితం",
-      author: "రాజేష్",
-      category: "sports"
-    },
-    6: {
-      id: 6,
-      title: "కుల గణనపై వరంగల్లో ఘన ర్యాలీ",
-      excerpt: "వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా..",
-      content: `<p>వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్న కార్యక్రమం. కుల గణన వల్ల ప్రజలకు న్యాయం జరుగుతుందని నినాదాలు చేశారు.</p>
-                <p>ఈ ర్యాలీలో వేల మంది పాల్గొని తమ మద్దతు ప్రకటించారు. ప్రభుత్వం త్వరగా నిర్ణయం తీసుకోవాలని డిమాండ్ చేశారు.</p>`,
-      image: "https://placecats.com/805/400",
-      date: "2 రోజుల క్రితం",
-      author: "స్వాతి",
-      category: "politics"
-    }
+  // Comprehensive News Database with Dates
+  const newsDatabase = {
+    // Format: YYYY-MM-DD
+    "2026-03-06": [
+      {
+        id: "mar6-1",
+        title: "హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు",
+        excerpt: "కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం..",
+        content: `<p>కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం. పోలీసులు కేసు నమోదు చేసి విచారణ జరుపుతున్నారు.</p>
+                  <p>విద్యార్థులు అధికారులతో చర్చలకు సిద్ధమని తెలిపారు. ఈ ర్యాలీలో 10,000 మందికి పైగా విద్యార్థులు పాల్గొన్నారు.</p>
+                  <div class="article-quote"><i class="fas fa-quote-left"></i> మా గొంతు వినిపించాలి, న్యాయం జరగాలి <i class="fas fa-quote-right"></i></div>`,
+        image: "https://placecats.com/800/400",
+        author: "శ్రీను",
+        category: "పొలిటిక్స్",
+        time: "2 గంటల క్రితం"
+      },
+      {
+        id: "mar6-2",
+        title: "వరంగల్ క్రికెట్ జట్టు సెమీఫైనల్లో",
+        excerpt: "జిల్లా స్థాయి పోటీల్లో అద్భుత ప్రదర్శన..",
+        content: `<p>వరంగల్ క్రికెట్ జట్టు సెమీఫైనల్లోకి ప్రవేశించింది. ఫైనల్ ఆదివారం జరుగనుంది.</p>`,
+        image: "https://placecats.com/801/400",
+        author: "రాజేష్",
+        category: "క్రీడలు",
+        time: "5 గంటల క్రితం"
+      }
+    ],
+    "2026-03-05": [
+      {
+        id: "mar5-1",
+        title: "బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం",
+        excerpt: "చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని..",
+        content: `<p>చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం. రైతు సంఘాలు పెద్ద ఎత్తున మద్దతు ప్రకటించాయి.</p>`,
+        image: "https://placecats.com/802/400",
+        author: "కవిత",
+        category: "జిల్లా",
+        time: "1 రోజు క్రితం"
+      }
+    ],
+    "2026-03-04": [
+      {
+        id: "mar4-1",
+        title: "కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు",
+        excerpt: "రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల..",
+        content: `<p>రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ.</p>`,
+        image: "https://placecats.com/803/400",
+        author: "డా. సాయి",
+        category: "విద్య",
+        time: "2 రోజుల క్రితం"
+      },
+      {
+        id: "mar4-2",
+        title: "కుల గణనపై వరంగల్లో ఘన ర్యాలీ",
+        excerpt: "వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా..",
+        content: `<p>వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్నారు.</p>`,
+        image: "https://placecats.com/804/400",
+        author: "స్వాతి",
+        category: "పొలిటిక్స్",
+        time: "2 రోజుల క్రితం"
+      }
+    ],
+    "2026-03-03": [
+      {
+        id: "mar3-1",
+        title: "వరంగల్ ఫుడ్ ఫెస్టివల్ ప్రారంభం",
+        excerpt: "పది రోజుల పాటు వివిధ రకాల ఆహార ప్రదర్శన..",
+        content: `<p>వరంగల్ ఫుడ్ ఫెస్టివల్ నేడు ప్రారంభమైంది. దేశ విదేశాల నుండి వంటల నిపుణులు పాల్గొంటున్నారు.</p>`,
+        image: "https://placecats.com/805/400",
+        author: "ప్రియ",
+        category: "సినిమా",
+        time: "3 రోజుల క్రితం"
+      }
+    ],
+    "2026-03-02": [
+      {
+        id: "mar2-1",
+        title: "వరంగల్ కోటలో సాంస్కృతిక కార్యక్రమాలు",
+        excerpt: "కాకతీయ వైభవం స్మృతిగా ప్రత్యేక కార్యక్రమం..",
+        content: `<p>వరంగల్ కోటలో సాంస్కృతిక కార్యక్రమాలు ఘనంగా నిర్వహించారు. వేల మంది పాల్గొన్నారు.</p>`,
+        image: "https://placecats.com/806/400",
+        author: "అరుణ",
+        category: "జిల్లా",
+        time: "4 రోజుల క్రితం"
+      }
+    ]
   };
+
+  // Generate last 7 days dates
+  function generateLast7Days() {
+    const dates = [];
+    const today = new Date('2026-03-06'); // Using current date from your original
+    
+    for (let i = 6; i >= 0; i--) {
+      const date = new Date(today);
+      date.setDate(today.getDate() - i);
+      
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      const dateStr = `${year}-${month}-${day}`;
+      
+      const teluguMonths = ['జన', 'ఫిబ్ర', 'మార్చి', 'ఏప్రి', 'మే', 'జూన్', 'జులై', 'ఆగ', 'సెప్టెం', 'అక్టో', 'నవం', 'డిసెం'];
+      
+      dates.push({
+        dateStr: dateStr,
+        day: date.getDate(),
+        month: teluguMonths[date.getMonth()],
+        hasNews: newsDatabase[dateStr] ? true : false,
+        fullDate: date
+      });
+    }
+    return dates;
+  }
+
+  // Render Calendar
+  function renderCalendar(selectedDate = '2026-03-06') {
+    const dates = generateLast7Days();
+    const calendarHtml = dates.map(d => `
+      <div class="date-item ${d.dateStr === selectedDate ? 'active' : ''} ${d.hasNews ? '' : 'opacity-50'}" 
+           onclick="navigateToDate('${d.dateStr}')">
+        <div class="day">${d.day}</div>
+        <div class="month">${d.month}</div>
+        ${d.hasNews ? '<i class="fas fa-circle" style="font-size: 6px; color: #b1452b; margin-top: 4px;"></i>' : ''}
+      </div>
+    `).join('');
+    
+    document.getElementById('calendarDates').innerHTML = calendarHtml;
+  }
+
+  // Navigate to specific date
+  function navigateToDate(dateStr) {
+    history.pushState({}, '', `?page=date&date=${dateStr}`);
+    handleNavigation();
+    renderCalendar(dateStr);
+  }
+
+  // Format date to Telugu display
+  function formatDateTelugu(dateStr) {
+    const date = new Date(dateStr + 'T12:00:00');
+    const teluguMonths = ['జనవరి', 'ఫిబ్రవరి', 'మార్చి', 'ఏప్రిల్', 'మే', 'జూన్', 'జులై', 'ఆగస్టు', 'సెప్టెంబర్', 'అక్టోబర్', 'నవంబర్', 'డిసెంబర్'];
+    const teluguWeekdays = ['ఆదివారం', 'సోమవారం', 'మంగళవారం', 'బుధవారం', 'గురువారం', 'శుక్రవారం', 'శనివారం'];
+    
+    return {
+      date: date.getDate(),
+      month: teluguMonths[date.getMonth()],
+      year: date.getFullYear(),
+      weekday: teluguWeekdays[date.getDay()]
+    };
+  }
+
+  // Load More News function
+  function loadMoreNews() {
+    alert("మరిన్ని పాత వార్తల కోసం క్యాలెండర్ ను ఉపయోగించండి. (డెమో కోసం ఇది డమ్మీ ఫంక్షన్)");
+  }
 
   // Router function
   function handleNavigation() {
@@ -484,81 +603,190 @@
     const page = urlParams.get('page') || 'home';
     const newsId = urlParams.get('id');
     const category = urlParams.get('cat');
+    const date = urlParams.get('date') || '2026-03-06';
     
     let html = '';
     
-    if (page === 'article' && newsId && newsData[newsId]) {
-      // Show article page
-      const article = newsData[newsId];
-      html = `
-        <div class="article-page">
-          <a href="?page=home" class="back-button">
-            <i class="fas fa-arrow-left"></i> తిరిగి వార్తలకు
-          </a>
-          <h1 class="article-title">${article.title}</h1>
-          <div class="article-meta">
-            <span><i class="far fa-clock"></i> ${article.date}</span>
-            <span><i class="fas fa-user"></i> ${article.author}</span>
-            <span><i class="fas fa-folder"></i> ${article.category}</span>
+    // Article page
+    if (page === 'article' && newsId) {
+      // Find article across all dates
+      let article = null;
+      for (let d in newsDatabase) {
+        const found = newsDatabase[d].find(a => a.id === newsId);
+        if (found) {
+          article = found;
+          article.fullDate = d;
+          break;
+        }
+      }
+      
+      if (article) {
+        const teluguDate = formatDateTelugu(article.fullDate);
+        html = `
+          <div class="article-page">
+            <a href="?page=date&date=${article.fullDate}" class="back-button">
+              <i class="fas fa-arrow-left"></i> తిరిగి ${teluguDate.date} ${teluguDate.month} వార్తలకు
+            </a>
+            <h1 class="article-title">${article.title}</h1>
+            <div class="article-meta">
+              <span><i class="far fa-calendar"></i> ${teluguDate.weekday}, ${teluguDate.date} ${teluguDate.month} ${teluguDate.year}</span>
+              <span><i class="fas fa-user"></i> ${article.author}</span>
+              <span><i class="fas fa-tag"></i> ${article.category}</span>
+            </div>
+            <div class="article-image" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('${article.image}');"></div>
+            <div class="article-content">
+              ${article.content}
+            </div>
           </div>
-          <div class="article-image" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url('${article.image}');"></div>
-          <div class="article-content">
-            ${article.content}
+        `;
+      }
+    }
+    // Category page
+    else if (page === 'category' && category) {
+      const allNews = [];
+      for (let d in newsDatabase) {
+        newsDatabase[d].forEach(news => {
+          if (news.category === category) {
+            allNews.push({...news, fullDate: d});
+          }
+        });
+      }
+      
+      if (allNews.length > 0) {
+        html = `
+          <div class="mw-main">
+            <div class="section-head">
+              <i class="fas fa-filter"></i>
+              <h2>${category} వార్తలు</h2>
+            </div>
+            <div class="mw-grid">
+              ${allNews.map(news => {
+                const teluguDate = formatDateTelugu(news.fullDate);
+                return `
+                  <a href="?page=article&id=${news.id}" class="news-card">
+                    <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400')}');">
+                      <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> ${teluguDate.date} ${teluguDate.month}</div>
+                    </div>
+                    <div class="card-content">
+                      <div class="card-title">${news.title}</div>
+                      <div class="card-meta">
+                        <span><i class="far fa-clock"></i> ${news.time}</span>
+                        <span><i class="fas fa-user"></i> ${news.author}</span>
+                      </div>
+                      <div class="card-excerpt">${news.excerpt}</div>
+                      <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                  </a>
+                `}).join('')}
+            </div>
           </div>
-        </div>
-      `;
-    } else if (page === 'category' && category) {
-      // Show category page
-      const filteredNews = Object.values(newsData).filter(n => n.category === category);
-      html = `
-        <div class="mw-main">
-          <div class="section-head">
-            <i class="fas fa-filter"></i>
-            <h2>${category} వార్తలు</h2>
+        `;
+      }
+    }
+    // Date page
+    else if (page === 'date' && date) {
+      const newsForDate = newsDatabase[date] || [];
+      const teluguDate = formatDateTelugu(date);
+      
+      if (newsForDate.length > 0) {
+        html = `
+          <div class="mw-main">
+            <div class="selected-date-badge">
+              <i class="far fa-calendar-alt"></i> ${teluguDate.weekday}, ${teluguDate.date} ${teluguDate.month} ${teluguDate.year}
+            </div>
+            <div class="mw-grid">
+              ${newsForDate.map(news => `
+                <a href="?page=article&id=${news.id}" class="news-card">
+                  <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400')}');">
+                    <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> తాజా వార్త</div>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-title">${news.title}</div>
+                    <div class="card-meta">
+                      <span><i class="far fa-clock"></i> ${news.time}</span>
+                      <span><i class="fas fa-user"></i> ${news.author}</span>
+                    </div>
+                    <div class="card-excerpt">${news.excerpt}</div>
+                    <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+                  </div>
+                </a>
+              `).join('')}
+            </div>
           </div>
-          <div class="mw-grid">
-            ${filteredNews.map(news => `
-              <a href="?page=article&id=${news.id}" class="news-card">
-                <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400').replace('400', '200')}');">
-                  <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> తాజా వార్త</div>
-                </div>
-                <div class="card-content">
-                  <div class="card-title">${news.title}</div>
-                  <div class="card-meta"><i class="far fa-clock"></i> ${news.date} · <i class="fas fa-user"></i> ${news.author}</div>
-                  <div class="card-excerpt">${news.excerpt}</div>
-                  <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
-                </div>
-              </a>
-            `).join('')}
+        `;
+      } else {
+        html = `
+          <div class="mw-main">
+            <div class="selected-date-badge">
+              <i class="far fa-calendar-alt"></i> ${teluguDate.date} ${teluguDate.month} ${teluguDate.year}
+            </div>
+            <div class="no-news">
+              <i class="far fa-frown fa-3x"></i>
+              <h3>ఈ రోజు వార్తలు లేవు</h3>
+              <p>దయచేసి మరొక తేదీని ఎంచుకోండి</p>
+            </div>
           </div>
-        </div>
-      `;
-    } else {
-      // Show home page with all news
+        `;
+      }
+    }
+    // Home page
+    else {
+      const latestDate = '2026-03-06';
+      const latestNews = newsDatabase[latestDate] || [];
+      const teluguDate = formatDateTelugu(latestDate);
+      
       html = `
         <div class="mw-main">
           <div class="section-head">
             <i class="fas fa-newspaper"></i>
-            <h2>ఈరోజు హైలైట్స్</h2>
+            <h2>ఈరోజు హైలైట్స్ - ${teluguDate.date} ${teluguDate.month}</h2>
           </div>
           <div class="mw-grid">
-            ${Object.values(newsData).map(news => `
+            ${latestNews.map(news => `
               <a href="?page=article&id=${news.id}" class="news-card">
-                <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400').replace('400', '200')}');">
+                <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('${news.image.replace('800', '400')}');">
                   <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> తాజా వార్త</div>
                 </div>
                 <div class="card-content">
                   <div class="card-title">${news.title}</div>
-                  <div class="card-meta"><i class="far fa-clock"></i> ${news.date} · <i class="fas fa-user"></i> ${news.author}</div>
+                  <div class="card-meta">
+                    <span><i class="far fa-clock"></i> ${news.time}</span>
+                    <span><i class="fas fa-user"></i> ${news.author}</span>
+                  </div>
                   <div class="card-excerpt">${news.excerpt}</div>
                   <span class="read-more">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
                 </div>
               </a>
             `).join('')}
           </div>
+          
+          <div class="section-head" style="margin-top: 3rem;">
+            <i class="fas fa-history"></i>
+            <h2>గత వార్తలు</h2>
+          </div>
+          
+          <div class="mw-grid">
+            ${Object.entries(newsDatabase).filter(([d]) => d !== latestDate).slice(0, 3).map(([date, newsList]) => {
+              const teluguDate = formatDateTelugu(date);
+              const firstNews = newsList[0];
+              return `
+                <a href="?page=date&date=${date}" class="news-card">
+                  <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('${firstNews.image.replace('800', '400')}');">
+                    <div class="card-quote-overlay"><i class="fas fa-calendar"></i> ${teluguDate.date} ${teluguDate.month}</div>
+                  </div>
+                  <div class="card-content">
+                    <div class="card-title">${teluguDate.weekday} వార్తలు</div>
+                    <div class="card-meta">${newsList.length} వార్తలు</div>
+                    <div class="card-excerpt">${newsList.map(n => n.title.substring(0, 30)).join(' • ')}...</div>
+                    <span class="read-more">చూడండి <i class="fas fa-arrow-right"></i></span>
+                  </div>
+                </a>
+              `}).join('')}
+          </div>
+          
           <div class="mw-pagination">
             <div class="pagination-btn" onclick="loadMoreNews()">
-              <i class="fas fa-sync-alt"></i> మరిన్ని కథనాలు
+              <i class="fas fa-calendar-alt"></i> పాత వార్తల కోసం క్యాలెండర్ ఉపయోగించండి
             </div>
           </div>
         </div>
@@ -568,30 +796,33 @@
     document.getElementById('content-area').innerHTML = html;
   }
 
-  // Load more function
-  function loadMoreNews() {
-    alert("మరిన్ని కథనాలు లోడ్ అవుతున్నాయి... (డెమో కోసం ఇది డమ్మీ ఫంక్షన్)");
-  }
+  // Event Listeners
+  window.addEventListener('popstate', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedDate = urlParams.get('date') || '2026-03-06';
+    renderCalendar(selectedDate);
+    handleNavigation();
+  });
 
-  // Handle back/forward buttons
-  window.addEventListener('popstate', handleNavigation);
-
-  // Handle all navigation links
   document.addEventListener('click', function(e) {
     if (e.target.closest('a')) {
       const link = e.target.closest('a');
       const href = link.getAttribute('href');
       
-      // Only handle internal links that start with ?page=
-      if (href && href.startsWith('?page=')) {
+      if (href && href.startsWith('?')) {
         e.preventDefault();
         history.pushState({}, '', href);
+        
+        const urlParams = new URLSearchParams(href.substring(1));
+        const selectedDate = urlParams.get('date') || '2026-03-06';
+        renderCalendar(selectedDate);
         handleNavigation();
       }
     }
   });
 
-  // Initial load
+  // Initialize
+  renderCalendar('2026-03-06');
   handleNavigation();
 </script>
 </body>
