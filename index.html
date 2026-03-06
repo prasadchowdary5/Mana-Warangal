@@ -1,732 +1,539 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="csrf-param" content="_csrf" />
-    <meta name="csrf-token" content="hT5AukThUO7FCh7sKkmg_bqu1RhRrtpW6pPUTkO8uRrNfAzbBY49mvBGWqIeeOXN98aQaj7PqQ6op5E7MvvRTw==" />
-    <title>
-      Palakurthi Vani Telugu Daily - Palakurthi Vani
-    </title>
-    <!-- <link href="/resources//3rdparty/fontawesome-free-5.2.0-web/css/all.min.css" rel="Stylesheet" /> -->
-    <!-- <link href="/resources//3rdparty/fontawesome-free-5.15.4-web/css/all.min.css" rel="Stylesheet" /> -->
-    <meta property="og:locale" content="en_IN" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Palakurthi Vani Telugu Daily" />
-    <meta property="og:image:alt" content="Palakurthi Vani Telugu Daily" />
-    <meta name="twitter:title" content="Palakurthi Vani Telugu Daily" />
-    <meta property="og:site_name" content="Palakurthi Vani" />
-    <meta property="og:image" content="https://epaper.palakurthivani.com/media/c1200x630/2025-09/ogimage.jpg" />
-    <meta />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpg" />
-    <meta name="twitter:url" content="https://epaper.palakurthivani.com/" />
-    <meta property="og:url" content="https://epaper.palakurthivani.com/" />
-    <link href="https://epaper.palakurthivani.com/manifest.json" rel="manifest" />
-    <link type="application/rss+xml" href="https://epaper.palakurthivani.com/rss" title="RSS Feed" rel="alternate" />
-    <link href="https://epaper.palakurthivani.com/" rel="canonical" />
-    <link href="https://fonts.googleapis.com" rel="DNS-prefetch" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="dns-prefetch" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css?display=swap&amp;family=Roboto:regular,500,700|Roboto:regular,500,700" rel="preload" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" />
-    <link href="/resources//3rdparty/fontawesome-free-6.4.2-web/css/all.min.css" rel="prefetch" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;" />
-    <link href="/assets/epaper.palakurthivani.com-b.1.8.stylesheet.1756029827.css" rel="stylesheet" />
-    <style>
-      .socialwidget .format3 .twitter i{
-                    color:black !important;
-                  }
+<html lang="te">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>మన వరంగల్ – తాజా వార్తలు</title>
+  <!-- Font Awesome (latest) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Google Fonts: Roboto + Lohit Telugu for better telugu support -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', 'Lohit Telugu', 'Noto Sans Telugu', sans-serif;
+    }
 
-                  .socialwidget .format1 .twitter, 
-                  .socialwidget .format2 .twitter, 
-                  .sharewidget .format1 .shareit.twitter, 
-                  .sharewidget .format3 .shareit.twitter{
-                    background:black !important;
-                  }
-                  
-                  .sharewidget .format2 .shareit.twitter{
-                    border-color:black !important;
-                    color:black !important;
-                  }
+    body {
+      background-color: #f5f3f0;
+      color: #1e1e1e;
+    }
 
-                  .sharewidget .format2 .shareit.twitter:hover{
-                    background:black !important;
-                    color:white !important;
-                  }
+    /* main container */
+    .mw-site {
+      max-width: 1300px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 25px rgba(0,0,0,0.05);
+    }
 
-                  .share-clip-icons a:nth-child(2){
-                    background:black !important;
-                  }
-    </style>
-    <script src="/assets/epaper.palakurthivani.com-b.1.8.script.1756029827.js">
-    </script>
-    <script>
-      $(document).ready(function () {
-            $(&#34;.datepicker&#34;).datepicker({
-                dateFormat: &#34;dd M yy&#34;,
-                changeYear: true,
-                changeMonth: true,
-                yearRange: &#39;2010:2030&#39;
-            });
-             
-            $(&#34;.timepicker&#34;).timepicker({
-                &#39;timeFormat&#39;: &#39;H:m&#39;
-            });    
-            
-            $(document).ajaxStart(function () {                    
-                $(&#34;#progress&#34;).show();
-            });
-            $(document).ajaxStop(function () {                     
-                $(&#34;#progress&#34;).hide();
-            }); 
-            
+    /* header with telugu brand + quotation */
+    .mw-header {
+      background: linear-gradient(145deg, #8b1e1e 0%, #b1452b 100%);
+      padding: 1.8rem 1.5rem 1rem 1.5rem;
+      color: white;
+      position: relative;
+      border-bottom: 5px solid #fbc02d;
+    }
 
-            $(&#34;.ie-alert&#34;).hide();
-            if (isIE()){
-                $(&#34;.ie-alert&#34;).show();
-                $(&#34;.site-content, .site-header, .site-footer&#34;).css(&#34;opacity&#34;,&#34;0.4&#34;);
-            } 
-            
-            //if (/Safari/.test(navigator.userAgent) &amp;&amp; (/Mac OS/.test(navigator.userAgent) || /(iPhone|iPad)/.test(navigator.userAgent))) {
-            //if(!isPrefetchSupported()){
-            if (/Safari/.test(navigator.userAgent) &amp;&amp; (/Mac OS/.test(navigator.userAgent) || /(iPhone|iPad)/.test(navigator.userAgent))) {                         
-                         
-                $(&#34;link[rel=prefetch]&#34;).prop(&#34;rel&#34;,&#34;stylesheet&#34;);
-            }
-            
-            if(!!window.chrome == false){
-                              
-                $(&#34;link[rel=prefetch]&#34;).prop(&#34;rel&#34;,&#34;stylesheet&#34;);
-            } else { 
-                              
-            }
-            function isPrefetchSupported() {    
-                try {
-                    // Create a link element with rel=&#34;prefetch&#34;
-                    var link = document.createElement(&#39;link&#39;);
-                    link.rel = &#39;prefetch&#39;;
+    .mw-header-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+    }
 
-                    // Check if the browser retained the rel attribute
-                //  console.log(&#34;Prefetch Supported&#34;);
-                    return link.rel === &#39;prefetch&#39;;
-                    
-                } catch (e) {
-                    // An error occurred, so prefetch is not supported
-                //   console.log(&#34;Prefetch Not Supported&#34;);
-                    return false;
-                }
-            }
-       
- 
-        });
-  
-        
-        
-        function isIE() {
-            ua = navigator.userAgent;
-            /* MSIE used to detect old browsers and Trident used to newer ones*/
-            var is_ie = ua.indexOf(&#34;MSIE &#34;) &gt; -1 || ua.indexOf(&#34;Trident/&#34;) &gt; -1;
+    .mw-logo h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      text-shadow: 4px 4px 0 #572222;
+    }
 
-            return is_ie; 
-          }
-        
-            function generatePlaceholder(parent){
-                $(parent+&#34; input, &#34;+parent+&#34; textarea, &#34;+parent+&#34; select&#34;).each(function(){
+    .mw-logo p {
+      font-size: 1.2rem;
+      margin-left: 8px;
+      font-style: italic;
+      opacity: 0.9;
+    }
 
-                    var id = $(this).attr(&#34;id&#34;);
-                    var label = $(&#34;label[for=&#34;+id+&#34;]&#34;).html();
-                    $(this).prop(&#34;placeholder&#34;,label);
-                    $(&#34;label[for=&#34;+id+&#34;]&#34;).hide();
+    .mw-quote {
+      background: rgba(255,255,240,0.18);
+      backdrop-filter: blur(2px);
+      padding: 0.7rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: 1px solid #fbc02d;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-                });
-            }
-            $.ajaxSetup({
-                type: &#34;post&#34;,
-                dataType: &#34;json&#34;,
-                data: {&#34;_csrf&#34;: yii.getCsrfToken()},
-                error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    showError(textStatus, errorThrown);
-                } 
-                
-            });
-    </script>
-    <style media="print">
-      .hide_on_print{
-                display:none;
-            }
-    </style>
-    <style>
-      .navbar-expand-md .navbar-nav .nav-link{
-  font-weight: bold;
-}
-.site-header .pbwidget{
-margin:0px;
-}
-.site-logo img{
-  width:200px;
-}
-.navbar-brand{
-  padding:0px; margin:0px;
- 
-}
-.navigationbar{
-  padding-left:0px;
-  padding-right:0px;
-}
-.navbar-brand img{
-  border-radius: 10px;
-  width:150px;
-  padding-left:5px;
-  padding-right:5px;
-  
-  margin:0px; 
-   
-}
-.navigationbar{
-background:transparent;
-}
+    .mw-quote i {
+      margin-right: 10px;
+      color: #ffd966;
+    }
 
-.site-header{
-  /* background-image:url(/media/2022-08/header-bg.png); */
-  background-size:cover;
-  background-repeat: no-repeat;
-}
-.site-content .pbwidget .pbwidget-title, .site-footer .pbwidget .pbwidget-title, .site-header .pbwidget .pbwidget-title{
-background:transparent;
-}
-/*
-.navbar-light .navbar-toggler-icon {
-    background-image: url(&#34;data:image/svg+xml,%3csvg viewBox=&#39;0 0 30 30&#39; xmlns=&#39;http://www.w3.org/2000/svg&#39;%3e%3cpath stroke=&#39;rgba(0, 0, 0, 0.5)&#39; stroke-width=&#39;2&#39; stroke-linecap=&#39;round&#39; stroke-miterlimit=&#39;10&#39; d=&#39;M4 7h22M4 15h22M4 23h22&#39;/%3e%3c/svg%3e&#34;)
-}
-.navbar-light .navbar-toggler {
-    border: 1px solid rgba(0, 0, 0, .5);
-    background-color: rgba(255, 255, 255, .1);
-}*/
+    .mw-quote span {
+      font-family: 'Lohit Telugu', 'Noto Sans Telugu', serif;
+    }
 
-.main-navigation {
-background-color:var(--dark);
-}
-@media(max-width:768px){
-.main-navigation {
-background-color:var(--secondary);
-}
-}
-    </style>
-  </head>
-  <body class="pg-archive user-guest   ">
-    <div id="progress" style=" display:none;
-             background-color:white; width:150px; padding:10px;
-              text-align:center; position:fixed;
-             left:45%; top:45%; box-shadow: 0px 0px 5px rgba(0,0,0,0.5); z-index:3333333
-             ">
-      <i class="fa fa-spin fa-cog"></i>
-      <br />
+    /* navigation — simple & clean */
+    .mw-nav {
+      background: #2c130b;
+      padding: 0.7rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      border-bottom: 2px solid #f3b33d;
+    }
+
+    .mw-nav a {
+      color: #f5e2c1;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.15rem;
+      transition: 0.2s;
+      padding: 0.2rem 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .mw-nav a:hover {
+      color: #fbc02d;
+      border-bottom-color: #fbc02d;
+    }
+
+    .mw-nav .home-icon {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+
+    /* social media mini strip */
+    .mw-social-strip {
+      background: #faead3;
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 1px solid #dbb68c;
+    }
+
+    .mw-social-strip span {
+      color: #5f3e2c;
+      font-weight: 500;
+    }
+
+    .mw-social-strip a {
+      color: #5f3e2c;
+      font-size: 1.5rem;
+      margin-right: 1.2rem;
+      transition: 0.2s;
+    }
+
+    .mw-social-strip a:hover {
+      color: #b1452b;
+      transform: scale(1.1);
+    }
+
+    /* main content */
+    .mw-main {
+      padding: 2rem 1.5rem;
+      background: #fefcf7;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-left: 8px solid #b1452b;
+      padding-left: 1.2rem;
+    }
+
+    .section-head h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #2a1b13;
+      letter-spacing: -0.3px;
+    }
+
+    .section-head i {
+      font-size: 2rem;
+      margin-right: 0.8rem;
+      color: #b96b46;
+    }
+
+    /* thumbnail grid – exactly like social media news cards */
+    .mw-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 24px 24px 20px 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 4px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: 1px solid #f0e0d0;
+      overflow: hidden;
+    }
+
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 30px rgba(181, 76, 36, 0.15);
+      border-color: #c1663b;
+    }
+
+    .card-thumb {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      background-color: #d9c4b0;
+      background-blend-mode: overlay;
+    }
+
+    /* overlay quotation on thumbnail (subtle) */
+    .card-quote-overlay {
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(3px);
+      color: #ffefd5;
+      padding: 0.6rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      width: fit-content;
+      margin-bottom: 6px;
+      border: 1px solid #f5b87e;
+    }
+
+    .card-quote-overlay i {
+      margin-right: 6px;
+      color: #fbc02d;
+      font-size: 0.8rem;
+    }
+
+    .card-content {
+      padding: 1.3rem 1.2rem 1.5rem 1.2rem;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+      color: #2c1b10;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: #9e7b62;
+      margin-bottom: 1rem;
+      align-items: center;
+    }
+
+    .card-meta i {
+      margin-right: 4px;
+      color: #c27e55;
+    }
+
+    .card-excerpt {
+      color: #4f3e32;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+      font-size: 0.98rem;
+      border-left: 2px solid #fac364;
+      padding-left: 0.9rem;
+    }
+
+    .read-more {
+      display: inline-block;
+      background: none;
+      border: none;
+      color: #b1452b;
+      font-weight: 600;
+      padding: 0.3rem 0;
+      border-bottom: 2px dotted #d6936b;
+      cursor: pointer;
+    }
+
+    .read-more i {
+      transition: 0.2s;
+      margin-left: 5px;
+    }
+
+    .read-more:hover i {
+      transform: translateX(5px);
+    }
+
+    /* footer */
+    .mw-footer {
+      background: #25170f;
+      color: #dac2ad;
+      padding: 2rem 1.5rem 1.5rem;
+      border-top: 6px solid #b96b46;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo span {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #f5cba1;
+    }
+
+    .footer-copy {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .footer-social a {
+      color: #f5cba1;
+      font-size: 1.7rem;
+      margin-left: 15px;
+    }
+
+    .footer-social a:hover {
+      color: #fbc02d;
+    }
+
+    /* pagination (like social media load more) */
+    .mw-pagination {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+
+    .pagination-btn {
+      background: #fae6d8;
+      border: 1px solid #cb8e69;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #732f15;
+      transition: 0.2s;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .pagination-btn:hover {
+      background: #b96b46;
+      color: white;
+      border-color: #b1452b;
+    }
+
+    /* responsiveness */
+    @media (max-width: 700px) {
+      .mw-logo h1 { font-size: 2.4rem; }
+      .mw-quote { font-size: 1.1rem; padding: 0.4rem 1rem; }
+      .mw-header-top { flex-direction: column; gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .mw-grid { grid-template-columns: 1fr; }
+    }
+
+    /* dummy "inside the card" story preview (modal-like not needed, just click simulation) */
+    /* we keep it simple – click card shows an alert with "news content" (demo) */
+  </style>
+</head>
+<body>
+<div class="mw-site">
+  <!-- header with TELUGU logo and quotation -->
+  <div class="mw-header">
+    <div class="mw-header-top">
+      <div class="mw-logo">
+        <h1>మన వరంగల్</h1>
+        <p><i class="fas fa-feather-alt"></i> గొంతు లేని వారి స్వరం</p>
+      </div>
+      <div class="mw-quote">
+        <i class="fas fa-quote-right"></i>
+        <span>ఓటమి అనేది సోమరుల సొత్తు – వరంగల్ వీరులు ఎప్పటికీ లక్ష్యసాధనలోనే</span>
+        <i class="fas fa-quote-left" style="margin-left:8px;"></i>
+      </div>
     </div>
-    <section class="site-outer">
-      <header class="site-header">
-        <div class=" r-kqo2 bg-secondary" style=" ">
-          <div class="container">
-            <div class="row">
-              <div class="d-none d-sm-none d-md-block col-md-12 d-lg-block col-lg-12 d-xl-block col-xl-12">
-                <div class="" style="">
-                  <div data-wid="w-dnle" data-type="YXBwX21vZHVsZXNfcGFnZWJ1aWxkZXJfbnBsdWdpbnNfcGJ3aWRnZXRzX0ltYWdlV2lkZ2V0" data-widget-alias="imagewidget" class="pbwidget w-dnle imagewidget  site-logo  " style="">
-                    <div class="pbwidget-body">
-                      <a href="/" target="_self">                      <img src="https://epaper.palakurthivani.com/media/200/2025-08/logo4.png" alt="palakurthivani" loading="lazy" />
-</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class=" r-7v17 main-navigation  " style="  ">
-          <div class="container">
-            <div class="row">
-              <div class="d-md-block col-md-12">
-                <div class="" style="">
-                  <div data-wid="w-7vwc" data-type="YXBwX25wbHVnaW5zX3Bid2lkZ2V0c19OYXZpZ2F0aW9uQmFy" data-widget-alias="navigationbar" class="pbwidget w-7vwc navigationbar font1" style="">
-                    <div class="pbwidget-body">
-                      <style>
-                        #navbar69a9c346061a5{        
-        background-color:# ;
-    }
-    #navbar69a9c346061a5 .nav-link, #navbar69a9c346061a5 .navbar-brand{
-        color:#ffffff ;
-    }
-                      </style>
-                      <nav id="navbar69a9c346061a5" class="navbar navbar-expand-md   navbar-light">
-                        <a class="navbar-brand
-       d-md-none       
-       " href="https://epaper.palakurthivani.com/">                        <img src="https://epaper.palakurthivani.com/media/300/2025-08/logo4.png" alt="Palakurthi Vani" />
-</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menunavbar69a9c346061a5" aria-controls="menunavbar69a9c346061a5" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="menunavbar69a9c346061a5">
-                          <ul class="navbar-nav mr-auto">
-                            <li class="nav-item ml-3">
-                              <a class="nav-link  " target="_self" href="/">                              <i class="fas fa-home"></i>
-</a>
-                            </li>
-                            <li class="nav-item ml-3">
-                              <a class="nav-link  " target="_self" href="/about-us">                              About Us
-</a>
-                            </li>
-                            <li class="nav-item ml-3">
-                              <a class="nav-link  " target="_self" href="/contact-us">                              Contact Us
-</a>
-                            </li>
-                            <li class="nav-item ml-3">
-                              <a class="nav-link  " target="_self" href="/privacy-policy">                              Privacy Policy
-</a>
-                            </li>
-                          </ul>
-                        </div>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container r-t7ts " style="">
-          <div class="">
-            <div class="row">
-              <div class="d-xl-block col-xl-12">
-                <div class="" style="">
-                  <div data-wid="w-uien" data-type="YXBwX21vZHVsZXNfcGFnZWJ1aWxkZXJfbnBsdWdpbnNfcGJ3aWRnZXRzX0hUTUxXaWRnZXQ=" data-widget-alias="htmlwidget" class="pbwidget w-uien htmlwidget " style="">
-                    <div class="pbwidget-body">
-                      <!-- Top Ad -->
-                      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6344198490580839" data-ad-slot="5199799591" data-ad-format="auto" data-full-width-responsive="true">
-                      </ins>
-                      <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                      </script>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main class="site-content">
-        <div class="container r-jh2v " style="">
-          <div class="">
-            <div class="row">
-              <div class="d-md-block col-md-12">
-                <div class="" style="">
-                  <div data-wid="w-i68z" data-type="YXBwX21vZHVsZXNfcGFnZWJ1aWxkZXJfbnBsdWdpbnNfcGJ3aWRnZXRzX0hlYWRpbmdXaWRnZXQ=" data-widget-alias="headingwidget" class="pbwidget w-i68z headingwidget " style="">
-                    <div class="pbwidget-body">
-                      <div class="heading heading-h4 h4">
-                        <span>                        Palakurthi Vani Telugu Daily
-</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container r-6tsb " style="">
-          <div class="">
-            <div class="row">
-              <div class="d-md-block col-md-12 d-xl-block col-xl-12">
-                <div class="" style="">
-                  <div data-wid="w-0b7z" data-type="YXBwX21vZHVsZXNfZXBhcGVyX25wbHVnaW5zX3Bid2lkZ2V0c19BcmNoaXZlV2lkZ2V0" data-widget-alias="archivewidget" class="pbwidget w-0b7z archivewidget " style="">
-                    <div class="pbwidget-body">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/163/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-03/page-1-3991212.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/163/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                03 Mar 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/162/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-03/page-1-9520019.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/162/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                01 Mar 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/161/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-8269845.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/161/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                28 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/160/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-8184913.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/160/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                27 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/159/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-1104764.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/159/palakurthi-vani">                                palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                26 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/158/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-9665345.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/158/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                25 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/157/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-5860452.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/157/palakurthi-vani">                                palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                24 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/156/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-8456904.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/156/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                22 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/155/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-1740368.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/155/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                21 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/154/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-9193240.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/154/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                20 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/153/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-1403148.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/153/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                19 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="edition-thumb-box">
-                            <div class="edition-thumb" style="">
-                              <a href="/view/152/palakurthi-vani" data-linktype="edition-link" data-cat_ids="" style="
-                       background-image:url(&#39;https://epaper.palakurthivani.com/media/438x500/2026-02/page-1-2643205.jpg&#39;);
-                       background-size: cover; background-position: top center; background-repeat: no-repeat; display: block; height: 400px"></a>
-                            </div>
-                            <div class="edition-info">
-                              <div class="edition-title">
-                                <a data-linktype="edition-link" data-cat_ids="" href="/view/152/palakurthi-vani">                                Palakurthi Vani
-</a>
-                              </div>
-                              <div class="edition-date">
-                                18 Feb 2026
-                              </div>
-                              <div class="edition-categories">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="pagination-outer">
-                        <ul class="pagination">
-                          <li class="first page-item disabled">
-                            <span class="page-link" 0="a">                            First
-</span>
-                          </li>
-                          <li class="prev page-item disabled">
-                            <span class="page-link" 0="a">                            «
-</span>
-                          </li>
-                          <li class="page-item active">
-                            <a class="page-link" href="/epaper/default/archive?page=1" data-page="0">                            1
-</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/epaper/default/archive?page=2" data-page="1">                            2
-</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/epaper/default/archive?page=3" data-page="2">                            3
-</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="/epaper/default/archive?page=4" data-page="3">                            4
-</a>
-                          </li>
-                          <li class="next">
-                            <a class="page-link" href="/epaper/default/archive?page=2" data-page="1">                            »
-</a>
-                          </li>
-                          <li class="last">
-                            <a class="page-link" href="/epaper/default/archive?page=13" data-page="12">                            Last
-</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <footer class="site-footer">
-        <div class=" r-agbv bg-primary p-3 text-light" style="">
-          <div class="container">
-            <div class="row">
-              <div class="d-md-block col-md-12">
-                <div class="" style="">
-                  <div data-wid="w-5klt" data-type="YXBwX25wbHVnaW5zX3Bid2lkZ2V0c19Tb2NpYWxXaWRnZXQ=" data-widget-alias="socialwidget" class="pbwidget w-5klt socialwidget text-center p-4" style="">
-                    <div class="pbwidget-body">
-                      <div class="format2">
-                        <a target="_blank" class=" text-white d-inline-block facebook" style="font-size:20px; background-color:#3b5998; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-facebook-f"></i>
-</a>
-                        <a target="_blank" class=" text-white d-inline-block twitter" style="font-size:20px; background-color:#1da1f2; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-x-twitter"></i>
-</a>
-                        <a target="_blank" class=" text-white d-inline-block youtube" style="font-size:20px; background-color:#ff0000; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-youtube"></i>
-</a>
-                        <a target="_blank" class=" text-white d-inline-block instagram" style="font-size:20px; background-color:#c32aa3; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-instagram"></i>
-</a>
-                        <a target="_blank" class=" text-white d-inline-block telegram" style="font-size:20px; background-color:#41afe2; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-telegram"></i>
-</a>
-                        <a target="_blank" class=" text-white d-inline-block whatsapp" style="font-size:20px; background-color:#24cc63; 
-    padding-top:6.6666666666667px; text-align:center; border-radius:50%; 
-    width: 40px; height: 40px;" href="#">                        <i class="fa-brands fa-whatsapp"></i>
-</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div data-wid="w-n67q" data-type="YXBwX21vZHVsZXNfcGFnZWJ1aWxkZXJfbnBsdWdpbnNfcGJ3aWRnZXRzX0hUTUxXaWRnZXQ=" data-widget-alias="htmlwidget" class="pbwidget w-n67q htmlwidget text-white text-center" style="">
-                    <div class="pbwidget-body">
-                      Copyright (c)
-                      <a class="text-white" href="/">                      Palakurthi Vani
-</a>
-                      All Rights Reserved
-                    </div>
-                  </div>
-                  <div data-wid="w-fnc9" data-type="YXBwX21vZHVsZXNfcGFnZWJ1aWxkZXJfbnBsdWdpbnNfcGJ3aWRnZXRzX0hUTUxXaWRnZXQ=" data-widget-alias="htmlwidget" class="pbwidget w-fnc9 htmlwidget p-4 p-md-0" style="">
-                    <div class="pbwidget-body">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </section>
-    <!-- Google tag (gtag.js) for Google Analytics 4 -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W6BJPTW43Y">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag(&#39;js&#39;, new Date());
-                        gtag(&#39;config&#39;, &#39;G-W6BJPTW43Y&#39;);
-                        document.addEventListener(&#39;afterPageChange&#39;, function () {   
-                                gtag(&#39;config&#39;, &#39;G-W6BJPTW43Y&#39;,  {&#39;page_path&#39;: document.location.pathname}); 
-                        }, false);
-    </script>
-    <!-- End -->
-    <div class="ie-alert" style="width:100%; padding:30px; z-index:1000000; box-shadow:0px 0px 60px black;  position:fixed; top:0px; left:0px; font-size:18px; text-align:center; background-color:#fdf7e3; font-weight:bold; display:none;">
-      <img src="/resources/browser-support.webp" loading="lazy" alt="Your Browser is not supported" />
-    </div>
-    <script>
-      // Prevent closing from click inside dropdown
-$(document).on(&#39;click&#39;, &#39;.dropdown-menu&#39;, function (e) {
-  e.stopPropagation();
-});
+  </div>
 
-// make it as accordion for smaller screens
-/*window.onresize = function() {
-    if ($(window).width() &lt; 992) {
-        $(&#39;.dropdown-menu a&#39;).off(&#39;click&#39;,&#39;openSubmenu&#39;);
-        $(&#39;.dropdown-menu a&#39;).on(&#39;click&#39;,&#39;openSubmenu&#39;);        
+  <!-- navigation -->
+  <div class="mw-nav">
+    <a href="/" class="home-icon"><i class="fas fa-home"></i></a>
+    <a href="#">తాజా వార్తలు</a>
+    <a href="#">రాజకీయం</a>
+    <a href="#">క్రీడలు</a>
+    <a href="#">సినిమా</a>
+    <a href="#">జిల్లా</a>
+    <a href="#">బ్లాగులు</a>
+  </div>
+
+  <!-- social strip (mini) -->
+  <div class="mw-social-strip">
+    <span><i class="fab fa-facebook-f"></i> ‌‌@ManaWarangal </span>
+    <span><i class="fab fa-x-twitter"></i> @WarangalVoice</span>
+    <span><i class="fab fa-instagram"></i> warangal_today</span>
+    <span><i class="fab fa-youtube"></i> Warangal TV</span>
+    <span class="ml-auto"><i class="fas fa-calendar-alt"></i> 6 మార్చి 2026</span>
+  </div>
+
+  <!-- main area: thumbnail news grid -->
+  <div class="mw-main">
+    <div class="section-head">
+      <i class="fas fa-newspaper"></i>
+      <h2>ఈరోజు హైలైట్స్</h2>
+    </div>
+
+    <!-- news grid (each card = thumbnail + inside story) -->
+    <div class="mw-grid" id="newsGrid">
+      <!-- card 1 -->
+      <div class="news-card" onclick="openStory(1)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://placecats.com/400/200'); background-size: cover;">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> చరిత్ర సృష్టించే వరంగల్ యువత</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 2 గంటల క్రితం · <i class="fas fa-user"></i> శ్రీను</div>
+          <div class="card-excerpt">కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం..</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(1)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- card 2 -->
+      <div class="news-card" onclick="openStory(2)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('https://placecats.com/400/201');">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> ప్రతి ఒక్కరూ ఓటు వేయాల్సిందే</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 5 గంటల క్రితం · <i class="fas fa-user"></i> అజయ్</div>
+          <div class="card-excerpt">మాజీ మంత్రి, యువ నేత మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్..</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(2)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- card 3 -->
+      <div class="news-card" onclick="openStory(3)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('https://placecats.com/400/202');">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> చెరువులు పూడ్చి కట్టడాలు వద్దు</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 1 రోజు క్రితం · <i class="fas fa-user"></i> కవిత</div>
+          <div class="card-excerpt">చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం..</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(3)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- card 4 -->
+      <div class="news-card" onclick="openStory(4)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.1)), url('https://placecats.com/401/200');">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> యువతీ యువకులకు సూపర్ అవకాశం</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 1 రోజు క్రితం · <i class="fas fa-user"></i> డా. సాయి</div>
+          <div class="card-excerpt">రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(4)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- card 5 -->
+      <div class="news-card" onclick="openStory(5)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0.1)), url('https://placecats.com/401/201');">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> క్రీడల్లో మన వాళ్లు అదుర్స్</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 8 గంటల క్రితం · <i class="fas fa-user"></i> రాజేష్</div>
+          <div class="card-excerpt">రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(5)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+
+      <!-- card 6 -->
+      <div class="news-card" onclick="openStory(6)">
+        <div class="card-thumb" style="background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('https://placecats.com/402/200');">
+          <div class="card-quote-overlay"><i class="fas fa-quote-right"></i> ఇది అందరి పోరాటం</div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">కుల గణనపై వరంగల్లో ఘన ర్యాలీ</div>
+          <div class="card-meta"><i class="far fa-clock"></i> 2 రోజుల క్రితం · <i class="fas fa-user"></i> స్వాతి</div>
+          <div class="card-excerpt">వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్న కార్యక్రమం..</div>
+          <span class="read-more" onclick="event.stopPropagation();openStory(6)">పూర్తి కథనం <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- pagination (mock) -->
+    <div class="mw-pagination">
+      <div class="pagination-btn" onclick="loadMore()"><i class="fas fa-sync-alt"></i> మరిన్ని కథనాలు</div>
+    </div>
+  </div>
+
+  <!-- footer with same telugu style -->
+  <div class="mw-footer">
+    <div class="footer-content">
+      <div class="footer-logo"><span>మన వరంగల్</span></div>
+      <div class="footer-copy">
+        <i class="far fa-copyright"></i> 2026 మన వరంగల్ న్యూస్. అన్ని హక్కులు రిజర్వు చేయబడ్డాయి.<br>
+        <span style="font-size:0.9rem;">గాంధీ రోడ్డు, వరంగల్ - 506002</span>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem; font-size:1rem; border-top: 1px solid #664a39; padding-top:1.5rem;">
+      <i class="fas fa-quote-left" style="color:#d18e5c;"></i> సమాజం గెలవాలి, మన వరంగల్ నిలవాలి <i class="fas fa-quote-right" style="color:#d18e5c;"></i>
+    </div>
+  </div>
+</div>
+
+<!-- dummy javascript for "inside news" modal simulation (alerts) & load more -->
+<script>
+  // open story function (simulate reading full article)
+  function openStory(newsId) {
+    const stories = [
+      { title: "హన్మకొండలో భారీ ర్యాలీ.. 10 వేల మంది విద్యార్థులు", content: "కాకతీయ విశ్వవిద్యాలయం నుండి ప్రారంభమైన ఉద్యమం.. ఉన్నత విద్య కోసం నిరసనగా మారిన యువతరం. పోలీసులు కేసు నమోదు చేసి విచారణ జరుపుతున్నారు. విద్యార్థులు అధికారులతో చర్చలకు సిద్ధమని తెలిపారు." },
+      { title: "వరంగల్ తూర్పు నియోజకవర్గంలో హోరాహోరీ పోటీ", content: "మాజీ మంత్రి శ్రీనివాస్ రెడ్డి, యువ నేత అంజయ్య యాదవ్ మధ్య ఆసక్తికర పోరు.. ఇప్పటివరకు 60% పోలింగ్ నమోదైంది. ప్రశాంతంగా ఓటింగ్ జరుగుతోంది." },
+      { title: "ప్రసిద్ధ బడేరావు చెరువు పరిరక్షణకు రైతుల నిర్ణయం", content: "చెరువు పరిసరాల్లో నిర్మాణాలు నిలిపివేయాలని కలెక్టర్కు వినతిపత్రం. రైతు సంఘాలు పెద్ద ఎత్తున మద్దతు ప్రకటించాయి." },
+      { title: "కాకతీయ మెడికల్ కాలేజీలో 150 MBBS సీట్లు", content: "రాష్ట్ర కౌన్సెలింగ్ షెడ్యూల్ విడుదల.. దరఖాస్తులకు 15వ తేదీ చివరి తేదీ. EAMCET ర్యాంకుల ఆధారంగా ప్రవేశాలు." },
+      { title: "వరంగల్ బాలికల జిల్లా హాకీ జట్టు ఫైనల్లో", content: "రాష్ట్ర స్థాయి పోటీల్లో అద్భుత ప్రదర్శన.. ఫైనల్ ఆదివారం హైదరాబాద్లో జరుగనుంది. ప్రభుత్వం జట్టును ప్రోత్సహించింది." },
+      { title: "కుల గణనపై వరంగల్లో ఘన ర్యాలీ", content: "వివిధ సంఘాలు, కార్మికులు, మహిళలు భారీగా పాల్గొన్నారు. కుల గణన వల్ల ప్రజలకు న్యాయం జరుగుతుందని నినాదాలు చేశారు." }
+    ];
+    const selected = stories[newsId-1] || stories[0];
+    alert("📰 " + selected.title + "\n\n" + selected.content + "\n\n( ఇది లోపలి వార్త కంటెంట్ - మన వరంగల్ )");
+  }
+
+  function loadMore() {
+    alert("మరిన్ని కథనాలు లోడ్ అవుతున్నాయి... (demo)");
+    // you could append more cards dynamically, but for demo just message.
+    // optional: add one more card
+    const grid = document.getElementById('newsGrid');
+    if(grid.children.length < 12) {
+      const demoHtml = ` <div class="news-card" onclick="openStory(1)"> ... </div>`; // skip for brevity
+      // just show toast, do nothing else
     }
-}; */
-$(&#39;.dropdown-item.dropdown-toggle&#39;).on(&#39;click&#39;,function(e){
-    e.preventDefault();
-    if($(this).next(&#39;.submenu&#39;).length){
-        $(this).next(&#39;.submenu&#39;).toggle();
-    }
-    $(&#39;.dropdown&#39;).on(&#39;hide.bs.dropdown&#39;, function () {
-        $(this).find(&#39;.submenu&#39;).hide();
-    })
-});
-    </script>
-  </body>
+  }
+</script>
+
+<!-- optional: notice that we're not loading heavy jquery, pure html/js -->
+</body>
 </html>
